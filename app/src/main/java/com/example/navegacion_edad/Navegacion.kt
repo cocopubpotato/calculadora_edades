@@ -14,10 +14,10 @@ fun NavManager(){
 
     NavHost(navController, startDestination = "pregunta"){
         composable("pregunta"){
-            cuestionario(navController,edad)
+            Cuestionario(navController,edad)
         }
         composable("respuesta"){
-            respuestas( navController,edad)
+            Respuestas( navController,edad)
         }
 
     }

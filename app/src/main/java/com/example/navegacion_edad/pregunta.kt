@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.getValue
@@ -24,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 
 @Composable
-fun cuestionario(navegar: NavHostController,edadf: MutableState<Int>){
+fun Cuestionario(navegar: NavHostController,edadf: MutableState<Int>){
     var year by remember {mutableStateOf("")}
     var edad by remember { mutableStateOf(0) }
 
@@ -44,7 +43,7 @@ fun cuestionario(navegar: NavHostController,edadf: MutableState<Int>){
             }else{
                 navegar.navigate("respuesta")
                 edad= calculadora().Agecalc(year.toInt())
-                edadf.value= edad.toInt()
+                edadf.value= edad
                 navegar.navigate("respuesta")
             } },
             modifier=Modifier.width(120.dp),
